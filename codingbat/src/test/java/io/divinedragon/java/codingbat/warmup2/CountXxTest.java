@@ -16,7 +16,7 @@ class CountXxTest {
     }
 
     @Test
-    void shouldReturnZeroWhenStringIsNull() {
+    void shouldReturnZero_WhenStringIsNull() {
 
         final String str = null;
 
@@ -28,7 +28,7 @@ class CountXxTest {
     }
 
     @Test
-    void shouldReturnZeroWhenStringIsEmpty() {
+    void shouldReturnZero_WhenStringIsEmpty() {
 
         final String str = EMPTY;
 
@@ -40,7 +40,7 @@ class CountXxTest {
     }
 
     @Test
-    void shouldReturnZeroWhenStringIsNotEmptyAndNoOccurrence() {
+    void shouldReturnZero_WhenStringIsNotEmptyAndNoOccurrence() {
 
         final String str = "abcd";
 
@@ -52,7 +52,7 @@ class CountXxTest {
     }
 
     @Test
-    void shouldReturnCountOneWhenStringIsNotEmptyAndSingleOccurrence() {
+    void shouldReturnCountOne_WhenStringIsNotEmptyAndSingleOccurrence() {
 
         final String str = "axxd";
 
@@ -64,7 +64,7 @@ class CountXxTest {
     }
 
     @Test
-    void shouldReturnCountOneWhenStringIsNotEmptyAndMultipleOccurrenceNonOverlapping() {
+    void shouldReturnCountOne_WhenStringIsNotEmptyAndMultipleOccurrenceNonOverlapping() {
 
         final String str = "abxxcdxx";
 
@@ -76,7 +76,7 @@ class CountXxTest {
     }
 
     @Test
-    void shouldReturnCountOneWhenStringIsNotEmptyAndMultipleOccurrenceOverlapping() {
+    void shouldReturnCountOne_WhenStringIsNotEmptyAndMultipleOccurrenceOverlapping() {
 
         final String str = "xxxx";
 
