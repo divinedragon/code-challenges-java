@@ -6,12 +6,12 @@ import java.util.Optional;
 
 public class MakeAbba {
 
-    public String makeAbba(final String a, final String b) {
+    public String makeAbba(final String inputA, final String inputB) {
 
         final StringBuilder result = new StringBuilder();
 
-        final String aNormalized = Optional.ofNullable(a).orElseGet(EMPTY_STRING_SUPPLIER);
-        final String bNormalized = Optional.ofNullable(b).orElseGet(EMPTY_STRING_SUPPLIER);
+        final String aNormalized = Optional.ofNullable(inputA).orElseGet(EMPTY_STRING_SUPPLIER);
+        final String bNormalized = Optional.ofNullable(inputB).orElseGet(EMPTY_STRING_SUPPLIER);
 
         return result
                 .append(aNormalized)

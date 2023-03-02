@@ -18,12 +18,12 @@ class MakeAbbaTest {
     @Test
     void shouldReturnEmptyString_WhenBothAreNull() {
 
-        final String a = null;
-        final String b = null;
+        final String inputA = null;
+        final String inputB = null;
 
         final String expected = EMPTY_STRING;
 
-        final String actual = fixture.makeAbba(a, b);
+        final String actual = fixture.makeAbba(inputA, inputB);
 
         assertThat(actual).isEqualTo(expected);
     }
@@ -31,12 +31,12 @@ class MakeAbbaTest {
     @Test
     void shouldReturnEmptyString_WhenBothAreEmpty() {
 
-        final String a = EMPTY_STRING;
-        final String b = EMPTY_STRING;
+        final String inputA = EMPTY_STRING;
+        final String inputB = EMPTY_STRING;
 
         final String expected = EMPTY_STRING;
 
-        final String actual = fixture.makeAbba(a, b);
+        final String actual = fixture.makeAbba(inputA, inputB);
 
         assertThat(actual).isEqualTo(expected);
     }
@@ -44,12 +44,12 @@ class MakeAbbaTest {
     @Test
     void shouldReturnBB_WhenAIsNullAndBIsNotNull() {
 
-        final String a = null;
-        final String b = "B";
+        final String inputA = null;
+        final String inputB = "B";
 
         final String expected = "BB";
 
-        final String actual = fixture.makeAbba(a, b);
+        final String actual = fixture.makeAbba(inputA, inputB);
 
         assertThat(actual).isEqualTo(expected);
     }
@@ -57,12 +57,12 @@ class MakeAbbaTest {
     @Test
     void shouldReturnBB_WhenAIsEmptyAndBIsNotNull() {
 
-        final String a = EMPTY_STRING;
-        final String b = "B";
+        final String inputA = EMPTY_STRING;
+        final String inputB = "B";
 
         final String expected = "BB";
 
-        final String actual = fixture.makeAbba(a, b);
+        final String actual = fixture.makeAbba(inputA, inputB);
 
         assertThat(actual).isEqualTo(expected);
     }
@@ -70,12 +70,12 @@ class MakeAbbaTest {
     @Test
     void shouldReturnAA_WhenAIsNotNullAndBIsNull() {
 
-        final String a = "A";
-        final String b = null;
+        final String inputA = "A";
+        final String inputB = null;
 
         final String expected = "AA";
 
-        final String actual = fixture.makeAbba(a, b);
+        final String actual = fixture.makeAbba(inputA, inputB);
 
         assertThat(actual).isEqualTo(expected);
     }
@@ -83,12 +83,12 @@ class MakeAbbaTest {
     @Test
     void shouldReturnBB_WhenAIsNotNullAndBIsNull() {
 
-        final String a = "A";
-        final String b = EMPTY_STRING;
+        final String inputA = "A";
+        final String inputB = EMPTY_STRING;
 
         final String expected = "AA";
 
-        final String actual = fixture.makeAbba(a, b);
+        final String actual = fixture.makeAbba(inputA, inputB);
 
         assertThat(actual).isEqualTo(expected);
     }
@@ -96,12 +96,12 @@ class MakeAbbaTest {
     @Test
     void shouldReturnBB_WhenAIsNotNullAndBIsNotNullUpper() {
 
-        final String a = "A";
-        final String b = "B";
+        final String inputA = "A";
+        final String inputB = "B";
 
         final String expected = "ABBA";
 
-        final String actual = fixture.makeAbba(a, b);
+        final String actual = fixture.makeAbba(inputA, inputB);
 
         assertThat(actual).isEqualTo(expected);
     }
@@ -109,12 +109,12 @@ class MakeAbbaTest {
     @Test
     void shouldReturnBB_WhenAIsNotNullAndBIsNotNullLower() {
 
-        final String a = "a";
-        final String b = "b";
+        final String inputA = "a";
+        final String inputB = "b";
 
         final String expected = "abba";
 
-        final String actual = fixture.makeAbba(a, b);
+        final String actual = fixture.makeAbba(inputA, inputB);
 
         assertThat(actual).isEqualTo(expected);
     }
@@ -122,12 +122,12 @@ class MakeAbbaTest {
     @Test
     void shouldReturnBB_WhenAIsNotNullAndBIsNotNullMixed() {
 
-        final String a = "A";
-        final String b = "b";
+        final String inputA = "A";
+        final String inputB = "b";
 
         final String expected = "AbbA";
 
-        final String actual = fixture.makeAbba(a, b);
+        final String actual = fixture.makeAbba(inputA, inputB);
 
         assertThat(actual).isEqualTo(expected);
     }
@@ -135,12 +135,12 @@ class MakeAbbaTest {
     @Test
     void shouldReturnBB_WhenAIsNotNullAndBIsNotNullMultiChar() {
 
-        final String a = "Abc";
-        final String b = "Xyz";
+        final String inputA = "Abc";
+        final String inputB = "Xyz";
 
         final String expected = "AbcXyzXyzAbc";
 
-        final String actual = fixture.makeAbba(a, b);
+        final String actual = fixture.makeAbba(inputA, inputB);
 
         assertThat(actual).isEqualTo(expected);
     }
