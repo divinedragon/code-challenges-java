@@ -22,7 +22,7 @@ class WithoutEnd2Test {
 
         final String expected = "ell";
 
-        final String actual = fixture.withouEnd2(input);
+        final String actual = fixture.withoutEnd2(input);
 
         assertThat(actual).isEqualTo(expected);
     }
@@ -34,7 +34,7 @@ class WithoutEnd2Test {
 
         final String expected = "b";
 
-        final String actual = fixture.withouEnd2(input);
+        final String actual = fixture.withoutEnd2(input);
 
         assertThat(actual).isEqualTo(expected);
     }
@@ -46,7 +46,7 @@ class WithoutEnd2Test {
 
         final String expected = EMPTY_STRING;
 
-        final String actual = fixture.withouEnd2(input);
+        final String actual = fixture.withoutEnd2(input);
 
         assertThat(actual).isEqualTo(expected);
     }
@@ -58,7 +58,7 @@ class WithoutEnd2Test {
 
         final String expected = EMPTY_STRING;
 
-        final String actual = fixture.withouEnd2(input);
+        final String actual = fixture.withoutEnd2(input);
 
         assertThat(actual).isEqualTo(expected);
     }
@@ -70,7 +70,7 @@ class WithoutEnd2Test {
 
         final String expected = EMPTY_STRING;
 
-        final String actual = fixture.withouEnd2(input);
+        final String actual = fixture.withoutEnd2(input);
 
         assertThat(actual).isEqualTo(expected);
     }
@@ -82,7 +82,7 @@ class WithoutEnd2Test {
 
         final String expected = EMPTY_STRING;
 
-        final String actual = fixture.withouEnd2(input);
+        final String actual = fixture.withoutEnd2(input);
 
         assertThat(actual).isEqualTo(expected);
     }
@@ -94,7 +94,7 @@ class WithoutEnd2Test {
 
         final String expected = EMPTY_STRING;
 
-        final String actual = fixture.withouEnd2(input);
+        final String actual = fixture.withoutEnd2(input);
 
         assertThat(actual).isEqualTo(expected);
     }

@@ -9,7 +9,7 @@ import java.util.Optional;
 
 public class WithoutEnd2 {
 
-    public String withouEnd2(final String input) {
+    public String withoutEnd2(final String input) {
 
         final String inputNormalized = Optional.ofNullable(input).orElseGet(EMPTY_STRING_SUPPLIER);
 
