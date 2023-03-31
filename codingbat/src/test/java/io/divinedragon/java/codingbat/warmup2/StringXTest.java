@@ -1,6 +1,6 @@
 package io.divinedragon.java.codingbat.warmup2;
 
-import static io.divinedragon.java.common.StringConstants.EMPTY;
+import static io.divinedragon.java.common.StringConstants.EMPTY_STRING;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -56,7 +56,7 @@ class StringXTest {
 
         final String str = null;
 
-        final String expected = EMPTY;
+        final String expected = EMPTY_STRING;
 
         final String actual = fixture.stringX(str);
 
@@ -68,7 +68,7 @@ class StringXTest {
 
         final String str = null;
 
-        final String expected = EMPTY;
+        final String expected = EMPTY_STRING;
 
         final String actual = fixture.stringX(str);
 

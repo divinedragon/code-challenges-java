@@ -1,6 +1,6 @@
 package io.divinedragon.java.codingbat.warmup2;
 
-import static io.divinedragon.java.common.StringConstants.EMPTY;
+import static io.divinedragon.java.common.StringConstants.EMPTY_STRING_SUPPLIER;
 
 import java.util.Optional;
 import java.util.regex.Matcher;
@@ -14,7 +14,7 @@ public final class CountXX {
 
         int count = 0;
 
-        final String input = Optional.ofNullable(str).orElseGet(() -> EMPTY);
+        final String input = Optional.ofNullable(str).orElseGet(EMPTY_STRING_SUPPLIER);
         final Matcher matcher = PATTERN.matcher(input);
 
         // The trick is to start again at the first matched position

@@ -1,6 +1,6 @@
 package io.divinedragon.java.codingbat.warmup2;
 
-import static io.divinedragon.java.common.StringConstants.EMPTY;
+import static io.divinedragon.java.common.StringConstants.EMPTY_STRING;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -87,14 +87,14 @@ class StringMatchTest {
     @Test
     void shouldReturnZero_WhenStringIsEmpty() {
 
-        final String inputA1 = EMPTY;
+        final String inputA1 = EMPTY_STRING;
         final String inputB1 = INPUT_ABC;
 
         final String inputA2 = INPUT_ABC;
-        final String inputB2 = EMPTY;
+        final String inputB2 = EMPTY_STRING;
 
-        final String inputA3 = EMPTY;
-        final String inputB3 = EMPTY;
+        final String inputA3 = EMPTY_STRING;
+        final String inputB3 = EMPTY_STRING;
 
         final int expectedCount = 0;
 

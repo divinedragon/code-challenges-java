@@ -1,6 +1,6 @@
 package io.divinedragon.java.codingbat.warmup2;
 
-import static io.divinedragon.java.common.StringConstants.EMPTY;
+import static io.divinedragon.java.common.StringConstants.EMPTY_STRING;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -138,7 +138,7 @@ class DoubleXTest {
     @Test
     void shouldReturnFalse_WhenEmpty() {
 
-        final String str = EMPTY;
+        final String str = EMPTY_STRING;
 
         final boolean expected = false;
 

@@ -1,5 +1,6 @@
 package io.divinedragon.java.codingbat.warmup1;
 
+import static io.divinedragon.java.common.StringConstants.EMPTY_STRING;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -17,7 +18,7 @@ class StringETest {
     @Test
     void shouldReturnFalse_WhenStringIsEmpty() {
 
-        final String str = "";
+        final String str = EMPTY_STRING;
 
         final boolean expected = false;
 
