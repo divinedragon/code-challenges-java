@@ -17,11 +17,13 @@ jobs:
           distribution: "temurin"
           cache: maven
       - name: Build with Maven
+        with:
+          CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_TOKEN }}
         run: |
           export PROJECT_NAME="code-challenges-java"
           export COVERAGE_FILE="jacoco-report/target/site/jacoco-aggregate/jacoco.xml"
           export CODACY_PROJECT_NAME="$PROJECT_NAME"
-          export CODACY_PROJECT_TOKEN="${{ secrets.CODACY_TOKEN }}"
+          # export CODACY_PROJECT_TOKEN="$CODACY_TOKEN"
 
           mvn -B clean verify
 
