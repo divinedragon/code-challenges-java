@@ -27,3 +27,7 @@ replay_pid*
 .project
 .settings
 .classpath
+
+# PMD
+**/.pmd
+**/.ruleset
