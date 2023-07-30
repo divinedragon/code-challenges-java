@@ -16,6 +16,7 @@ jobs:
         java-version: "11"
         distribution: "temurin"
         cache: maven
+        CODACY_TOKEN: "${{ secrets.CODACY_TOKEN }}"
     - name: Build with Maven
       run: |
         export PROJECT_NAME="code-challenges-java"
