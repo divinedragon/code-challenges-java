@@ -190,8 +190,8 @@
         <module name="CustomImportOrder">
             <property name="sortImportsInGroupAlphabetically" value="true"/>
             <property name="separateLineBetweenGroups" value="true"/>
-            <property name="customImportOrderRules" value="STATIC###THIRD_PARTY_PACKAGE###SPECIAL_IMPORTS"/>
-            <property name="specialImportsRegExp" value="^io\.sampadadubey\."/>
+            <property name="customImportOrderRules" value="STATIC###SAME_PACKAGE(2)###STANDARD_JAVA_PACKAGE###THIRD_PARTY_PACKAGE###SPECIAL_IMPORTS"/>
+            <property name="specialImportsRegExp" value="^io\.divinedragon\."/>
         </module>
         <module name="MethodParamPad"/>
         <module name="NoWhitespaceBefore">
@@ -240,10 +240,16 @@
         </module>
         -->
         <module name="MethodName">
-            <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9_]*$"/>
-            <message key="name.invalidPattern"
-             value="Method name ''{0}'' must match pattern ''{1}''."/>
+            <property name="id" value="MethodNameMain"/>
+            <property name="format" value="^[a-z][a-zA-Z0-9]*$"/>
+            <message key="name.invalidPattern" value="Method name ''{0}'' must match pattern ''{1}''."/>
         </module>
+        <module name="MethodName">
+            <property name="id" value="MethodNameTest"/>
+            <property name="format" value="^[a-z][a-zA-Z0-9_]*$"/>
+            <message key="name.invalidPattern" value="Method name ''{0}'' must match pattern ''{1}''."/>
+        </module>
+
         <module name="SingleLineJavadoc">
             <property name="ignoreInlineTags" value="false"/>
         </module>
@@ -255,5 +261,15 @@
     <module name="LineLength">
         <property name="max" value="150"/>
         <property name="ignorePattern" value="^package.*|^import.*|a href|href|http://|https://|ftp://"/>
+    </module>
+    <module name="SuppressionSingleFilter">
+        <metadata name="net.sf.eclipsecs.core.comment" value="Suppress MethodNameMain check on tests"/>
+        <property name="files" value=".*[\\/]src[\\/]test[\\/]"/>
+        <property name="id" value="MethodNameMain"/>
+    </module>
+    <module name="SuppressionSingleFilter">
+        <metadata name="net.sf.eclipsecs.core.comment" value="Suppress MethodNameTest check except on tests"/>
+        <property name="files" value=".*[\\/]src[\\/](?!test[\\/])"/>
+        <property name="id" value="MethodNameTest"/>
     </module>
 </module>
