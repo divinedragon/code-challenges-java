@@ -19,14 +19,11 @@ jobs:
       - name: Build with Maven
         run: mvn -B clean verify
       - name: Upload Reports
-        shell: bash
-        with:
-          CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
         run: |
           export PROJECT_NAME="code-challenges-java"
           export COVERAGE_FILE="jacoco-report/target/site/jacoco-aggregate/jacoco.xml"
           export CODACY_PROJECT_NAME="$PROJECT_NAME"
-          # export CODACY_PROJECT_TOKEN="$CODACY_TOKEN"
+          export CODACY_PROJECT_TOKEN="${{ secrets.CODACY_PROJECT_TOKEN }}"
 
           # Submit Coverage Data to Codacy
           bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r $COVERAGE_FILE
