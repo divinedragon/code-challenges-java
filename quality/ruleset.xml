@@ -51,6 +51,11 @@
             <property name="junit5TestPattern" value="[a-z][a-zA-Z0-9_]*" />
         </properties>
     </rule>
+    <rule ref="category/java/codestyle.xml/LongVariable">
+        <properties>
+            <property name="minimum" value="30" />
+        </properties>
+    </rule>
     <rule ref="category/java/design.xml/TooManyMethods">
         <properties>
             <property name="maxmethods" value="50" />
