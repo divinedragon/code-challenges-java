@@ -1,7 +1,7 @@
 package io.divinedragon.java.codingbat.warmup2;
 
 import static io.divinedragon.java.common.NumberConstants.TWO;
-import static io.divinedragon.java.common.StringConstants.EMPTY;
+import static io.divinedragon.java.common.StringConstants.EMPTY_STRING_SUPPLIER;
 
 import java.util.Optional;
 
@@ -9,7 +9,7 @@ public final class AltPairs {
 
     public String altPairs(final String input) {
 
-        final String str = Optional.ofNullable(input).orElseGet(() -> EMPTY);
+        final String str = Optional.ofNullable(input).orElseGet(EMPTY_STRING_SUPPLIER);
 
         final StringBuilder result = new StringBuilder();
 

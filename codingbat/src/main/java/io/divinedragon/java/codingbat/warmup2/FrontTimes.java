@@ -1,7 +1,7 @@
 package io.divinedragon.java.codingbat.warmup2;
 
 import static io.divinedragon.java.common.NumberConstants.THREE;
-import static io.divinedragon.java.common.StringConstants.EMPTY;
+import static io.divinedragon.java.common.StringConstants.EMPTY_STRING_SUPPLIER;
 
 import java.util.Optional;
 
@@ -11,7 +11,7 @@ public final class FrontTimes {
 
         final StringBuilder result = new StringBuilder();
 
-        final String input = Optional.ofNullable(str).orElseGet(() -> EMPTY);
+        final String input = Optional.ofNullable(str).orElseGet(EMPTY_STRING_SUPPLIER);
 
         if (!input.isEmpty()) {
 

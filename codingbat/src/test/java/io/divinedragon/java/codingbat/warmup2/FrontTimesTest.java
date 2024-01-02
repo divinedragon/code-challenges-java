@@ -1,6 +1,6 @@
 package io.divinedragon.java.codingbat.warmup2;
 
-import static io.divinedragon.java.common.StringConstants.EMPTY;
+import static io.divinedragon.java.common.StringConstants.EMPTY_STRING;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -21,7 +21,7 @@ class FrontTimesTest {
         final String str = null;
         final int number = 5;
 
-        final String expected = EMPTY;
+        final String expected = EMPTY_STRING;
 
         final String actual = fixture.frontTimes(str, number);
 
@@ -31,10 +31,10 @@ class FrontTimesTest {
     @Test
     void shouldReturnEmptyString_WhenStringIsEmpty() {
 
-        final String str = EMPTY;
+        final String str = EMPTY_STRING;
         final int number = 5;
 
-        final String expected = EMPTY;
+        final String expected = EMPTY_STRING;
 
         final String actual = fixture.frontTimes(str, number);
 
@@ -73,7 +73,7 @@ class FrontTimesTest {
         final String str = "abcd";
         final int number = 0;
 
-        final String expected = EMPTY;
+        final String expected = EMPTY_STRING;
 
         final String actual = fixture.frontTimes(str, number);
 

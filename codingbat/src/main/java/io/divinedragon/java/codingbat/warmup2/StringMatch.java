@@ -1,6 +1,6 @@
 package io.divinedragon.java.codingbat.warmup2;
 
-import static io.divinedragon.java.common.StringConstants.EMPTY;
+import static io.divinedragon.java.common.StringConstants.EMPTY_STRING_SUPPLIER;
 
 import java.util.Optional;
 
@@ -8,8 +8,8 @@ public final class StringMatch {
 
     public int stringMatch(final String input1, final String input2) {
 
-        final String string1 = Optional.ofNullable(input1).orElseGet(() -> EMPTY);
-        final String string2 = Optional.ofNullable(input2).orElseGet(() -> EMPTY);
+        final String string1 = Optional.ofNullable(input1).orElseGet(EMPTY_STRING_SUPPLIER);
+        final String string2 = Optional.ofNullable(input2).orElseGet(EMPTY_STRING_SUPPLIER);
 
         final int loopCounter = Math.min(string1.length(), string2.length());
 

@@ -1,5 +1,6 @@
 package io.divinedragon.java.codingbat.warmup1;
 
+import static io.divinedragon.java.common.StringConstants.EMPTY_STRING;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -47,8 +48,8 @@ class Front3Test {
     @Test
     void shouldReturnCorrectString_WhenStringIsBlank() {
 
-        final String expected = "";
-        final String str = "";
+        final String expected = EMPTY_STRING;
+        final String str = EMPTY_STRING;
         final String actual = fixture.front3(str);
 
         assertThat(actual).isEqualTo(expected);

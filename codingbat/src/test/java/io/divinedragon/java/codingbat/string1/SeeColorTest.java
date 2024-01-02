@@ -1,5 +1,6 @@
 package io.divinedragon.java.codingbat.string1;
 
+import static io.divinedragon.java.common.StringConstants.EMPTY_STRING;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -31,7 +32,7 @@ class SeeColorTest {
 
         final String input = "xxred";
 
-        final String expected = "";
+        final String expected = EMPTY_STRING;
 
         final String actual = fixture.seeColor(input);
 
@@ -55,7 +56,7 @@ class SeeColorTest {
 
         final String input = null;
 
-        final String expected = "";
+        final String expected = EMPTY_STRING;
 
         final String actual = fixture.seeColor(input);
 
@@ -65,9 +66,9 @@ class SeeColorTest {
     @Test
     void shouldReturnEmpty_WhenInputIsEmpty() {
 
-        final String input = "";
+        final String input = EMPTY_STRING;
 
-        final String expected = "";
+        final String expected = EMPTY_STRING;
 
         final String actual = fixture.seeColor(input);
 
@@ -80,7 +81,7 @@ class SeeColorTest {
         final String str1 = "a";
         final String str2 = "ab";
 
-        final String expected = "";
+        final String expected = EMPTY_STRING;
 
         final String actual1 = fixture.seeColor(str1);
         final String actual2 = fixture.seeColor(str2);

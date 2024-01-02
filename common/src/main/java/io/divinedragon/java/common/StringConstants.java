@@ -4,12 +4,9 @@ import java.util.function.Supplier;
 
 public final class StringConstants {
 
-    @Deprecated
-    public static final String EMPTY = "";
-
     public static final String EMPTY_STRING = "";
 
-    public static final Supplier<String> EMPTY_STRING_SUPPLIER = () -> "";
+    public static final Supplier<String> EMPTY_STRING_SUPPLIER = () -> EMPTY_STRING;
 
     private StringConstants() {
     }

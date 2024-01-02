@@ -1,7 +1,7 @@
 package io.divinedragon.java.codingbat.warmup2;
 
 import static io.divinedragon.java.common.NumberConstants.THREE;
-import static io.divinedragon.java.common.StringConstants.EMPTY;
+import static io.divinedragon.java.common.StringConstants.EMPTY_STRING_SUPPLIER;
 
 import java.util.Optional;
 import java.util.stream.IntStream;
@@ -12,7 +12,7 @@ public final class StringX {
 
     public String stringX(final String str) {
 
-        final String input = Optional.ofNullable(str).orElseGet(() -> EMPTY);
+        final String input = Optional.ofNullable(str).orElseGet(EMPTY_STRING_SUPPLIER);
 
         final StringBuilder result = new StringBuilder();
 

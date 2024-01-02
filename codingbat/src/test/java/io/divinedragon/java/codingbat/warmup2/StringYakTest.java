@@ -1,6 +1,6 @@
 package io.divinedragon.java.codingbat.warmup2;
 
-import static io.divinedragon.java.common.StringConstants.EMPTY;
+import static io.divinedragon.java.common.StringConstants.EMPTY_STRING;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -56,7 +56,7 @@ class StringYakTest {
 
         final String str = null;
 
-        final String expected = EMPTY;
+        final String expected = EMPTY_STRING;
 
         final String actual = fixture.stringYak(str);
 
@@ -66,9 +66,9 @@ class StringYakTest {
     @Test
     void shouldReturnEmptyString_WhenStringIsEmpty() {
 
-        final String str = EMPTY;
+        final String str = EMPTY_STRING;
 
-        final String expected = EMPTY;
+        final String expected = EMPTY_STRING;
 
         final String actual = fixture.stringYak(str);
 
@@ -119,8 +119,8 @@ class StringYakTest {
         final String expected1 = "abc";
         final String expected2 = "abcdefgh";
         final String expected3 = "abcdefgh";
-        final String expected4 = EMPTY;
-        final String expected5 = EMPTY;
+        final String expected4 = EMPTY_STRING;
+        final String expected5 = EMPTY_STRING;
 
         final String actual1 = fixture.stringYak(str1);
         final String actual2 = fixture.stringYak(str2);

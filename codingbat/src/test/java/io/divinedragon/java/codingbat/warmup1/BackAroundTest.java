@@ -1,5 +1,6 @@
 package io.divinedragon.java.codingbat.warmup1;
 
+import static io.divinedragon.java.common.StringConstants.EMPTY_STRING;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -37,8 +38,8 @@ class BackAroundTest {
     @Test
     void shouldBackAround_WhenEmptyString() {
 
-        final String str = "";
-        final String expected = "";
+        final String str = EMPTY_STRING;
+        final String expected = EMPTY_STRING;
         final String actual = fixture.backAround(str);
 
         assertThat(actual).isEqualTo(expected);

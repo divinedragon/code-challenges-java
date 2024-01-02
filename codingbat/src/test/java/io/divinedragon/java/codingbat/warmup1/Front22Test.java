@@ -1,5 +1,6 @@
 package io.divinedragon.java.codingbat.warmup1;
 
+import static io.divinedragon.java.common.StringConstants.EMPTY_STRING;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -47,7 +48,7 @@ class Front22Test {
     @Test
     void shouldPrefixSuffix_WhenStringLengthIsEmpty() {
 
-        final String str = "";
+        final String str = EMPTY_STRING;
         final String expected = str;
         final String actual = fixture.front22(str);
 

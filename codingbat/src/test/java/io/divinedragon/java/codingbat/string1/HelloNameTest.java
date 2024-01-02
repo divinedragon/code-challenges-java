@@ -1,5 +1,6 @@
 package io.divinedragon.java.codingbat.string1;
 
+import static io.divinedragon.java.common.StringConstants.EMPTY_STRING;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -29,7 +30,7 @@ class HelloNameTest {
     @Test
     void shouldReturnHello_WhenNameIsEmpty() {
 
-        final String name = "";
+        final String name = EMPTY_STRING;
 
         final String expected = "Hello!";
 
